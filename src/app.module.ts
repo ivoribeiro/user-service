@@ -1,8 +1,11 @@
 import { Module } from '@nestjs/common';
+import { AppController } from './app.controller';
+import { AppService } from './app.service';
 import { UsersModule } from './users/users.module';
-import { GraphQlmoduleModule } from './graph-qlmodule/graph-qlmodule.module';
 
 @Module({
-  imports: [UsersModule, GraphQlmoduleModule],
+  imports: [UsersModule],
+  controllers: [AppController],
+  providers: [AppService],
 })
-export class AppModule {}
+export class AppModule { }

@@ -1,5 +1,5 @@
 import { Resolver, Query } from '@nestjs/graphql';
-import { UsersService } from './users.service';
+import { UsersService } from './services/users.service';
 
 @Resolver()
 export class UsersResolver {
@@ -7,6 +7,6 @@ export class UsersResolver {
 
     @Query()
     users() {
-        return this.usersService.findAll();;
+        return this.usersService.findAll();
     }
 }
