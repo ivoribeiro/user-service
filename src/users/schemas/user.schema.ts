@@ -9,7 +9,7 @@ export const UserSchema = new mongoose.Schema({
     unique: true,
   },
   info: {
-    type: Object
+    type: Object,
   },
   password: String,
   role: String,
