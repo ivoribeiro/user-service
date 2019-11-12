@@ -8,6 +8,7 @@ export interface User extends Document {
   username: string;
   password: string;
   confirmationToken: string;
+  confirmed: boolean;
   info?: object;
   role?: Role;
 }
