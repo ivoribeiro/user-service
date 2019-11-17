@@ -17,4 +17,13 @@ export class UsersController {
   async confirm(@Param() params) {
     return this.usersService.confirm(params.confirmationToken);
   }
+  @Post('/login')
+  async login(@Body() userLogin) {
+    return this.usersService.login(userLogin);
+  }
+
+  @Post('/check')
+  async check(@Body() { token }) {
+    return this.usersService.check(token);
+  }
 }
